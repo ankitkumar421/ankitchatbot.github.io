@@ -3,9 +3,11 @@ function toggleChatbot() {
 }
 function talkToChatBot(event) {
     var userInput = document.getElementById('user-input').value;
-    this.generateHtml(userInput, 'right');
-    document.getElementById('user-input').value = '';
-    this.getBotReply();
+    if(userInput) {
+        this.generateHtml(userInput, 'right');
+        document.getElementById('user-input').value = '';
+        this.getBotReply();
+    }
 }
 
 function generateHtml(text, movementClass) {
@@ -19,9 +21,9 @@ function generateHtml(text, movementClass) {
     document.getElementById('all-chat-msg').appendChild(generateMessageDiv);
 }
 
-function talkToBotOnEnter() {
+function talkToBotOnEnter(event) {
     if(event.keyCode === 13) {
-        this.talkToChatBot();
+        this.talkToChatBot(event);
     }
 }
 
