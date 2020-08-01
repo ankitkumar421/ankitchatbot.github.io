@@ -68,6 +68,11 @@ ul li.active a{
     border-radius: 50%;
 }
 
+.chat1 img{
+    border-radius: 50%;
+    width: 50px;
+}
+
 .chat1 button:hover,
 .chat1 button:focus {
     box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
